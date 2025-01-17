@@ -14,7 +14,7 @@ Analyze how loan approval depends on various factors.
 
 ## Initial Model:
 
-![](https://github.com/ridhit10/Loan-Detection-Model/blob/main/photo.png)
+![](https://github.com/ridhit10/Loan-Detection-Model/blob/main/initial%20model.png)
 
 We will use P-Values to determine if a particular variable is significant using a significance level 0.05. The **p-value** represents the probability of observing the data assuming the null hypothesis is true. The **significance level alpha** is the threshold (e.g., 0.05) below which the p-value indicates a statistically significant result, leading to rejection of the null hypothesis.
 
@@ -27,6 +27,13 @@ Variables with p-values > 0.05 such as:
 ## Final Model:
 ![](https://github.com/ridhit10/Loan-Detection-Model/blob/main/final%20model.png)
 
+## Model Validity
+```r
+predictions <- predict(model, test)
+mse <- mean((test$LoanApproved - predictions)^2)
+rmse <- sqrt(mse) #Lower Values of rmse means it is a good model
+```
+**MSE** (Mean Squared Error) measures the average squared difference between actual and predicted values, with lower values indicating better model performance. **RMSE** (Root Mean Squared Error) is the square root of MSE, providing the error in the same units as the target variable, making it more interpretable. In our case, rmse comes out to be 0.15 which indicates our model is good enough. 
 
 ```r
 # Load necessary libraries
@@ -56,6 +63,27 @@ mse <- mean((test$LoanApproved - predictions)^2)
 rmse <- sqrt(mse) # Lower values of RMSE mean it is a good model
 
 ```
+
+## Loan Approval Trends Dashboard
+
+### Overview
+This Tableau dashboard visualizes trends in loan approvals over time, segmented by:
+- Employment status (Employed, Self-Employed, Unemployed).
+- Age groups (18-25, 26-35, 36-45, 46+).
+- Credit scores (using an adjustable filter for average credit scores).
+
+The visualization provides insights into:
+- The relationship between employment status and loan approval counts.
+- Variations in loan approvals across age groups over time.
+- The impact of credit score ranges on loan approvals.
+
+### Key Features
+- **Line Chart**: Displays the sum of approved loans (`SUM(Loan Approved)`).
+- **Segmentation**:
+  - `Employment Status` on rows.
+  - `Age Group` on colour for detailed comparison.
+- **Interactivity**: Users can filter by `Credit Score` using the adjustable range slider.
+
 
 
 
