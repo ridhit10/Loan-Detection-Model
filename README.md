@@ -25,7 +25,7 @@ Variables with p-values > 0.05 such as:
 - Variables like NumberOfDependents, UtilityBillsPaymentHistory, and others with insignificant p-values.
 
 ## Final Model:
-![](
+![](https://github.com/ridhit10/Loan-Detection-Model/blob/main/final%20model.png)
 
 
 ```r
