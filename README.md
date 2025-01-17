@@ -11,6 +11,23 @@ Analyze how loan approval depends on various factors.
 - Statistical analysis (e.g., interpreting R-squared values, and p-values).
 - Data visualization and storytelling through Tableau
 
+
+## Initial Model:
+
+![](https://github.com/ridhit10/Loan-Detection-Model/blob/main/photo.png)
+
+We will use P-Values to determine if a particular variable is significant using a significance level 0.05. The **p-value** represents the probability of observing the data assuming the null hypothesis is true. The **significance level alpha** is the threshold (e.g., 0.05) below which the p-value indicates a statistically significant result, leading to rejection of the null hypothesis.
+
+Removed Variables: 
+Variables with p-values > 0.05 such as:
+- Education levels (Bachelor, Doctorate, High School, Master)
+- Marital statuses (Married, Single, Widowed)
+- Variables like NumberOfDependents, UtilityBillsPaymentHistory, and others with insignificant p-values.
+
+## Final Model:
+![](
+
+
 ```r
 # Load necessary libraries
 library(caret)
@@ -39,8 +56,6 @@ mse <- mean((test$LoanApproved - predictions)^2)
 rmse <- sqrt(mse) # Lower values of RMSE mean it is a good model
 
 ```
-
----
 
 
 
