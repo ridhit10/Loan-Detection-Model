@@ -84,6 +84,10 @@ The visualization provides insights into:
   - `Age Group` on colour for detailed comparison.
 - **Interactivity**: Users can filter by `Credit Score` using the adjustable range slider.
 
+![](https://github.com/ridhit10/Loan-Detection-Model/blob/main/tableau.png)
+
+Here is the link to access the Dashboard: 
+(My Dashboard)[https://public.tableau.com/app/profile/ridhit.arora/viz/LoanDetectionModel/Sheet1?publish=yes]
 
 
 
